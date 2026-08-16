@@ -1,0 +1,53 @@
+
+    :root{
+    --navy:#051A3E;
+    --blue:#003D9B;
+    --blue-dark:#00306e;
+    --bg:#FAF9FF;
+    --bg-alt:#F1F3FF;
+    --footer-bg:#E9EBFC;
+    --text-body:#585B6E;
+    --border:#E3E6F5;
+    --card:#FBFBFF;
+    --radius-lg:20px;
+    --radius-md:14px;
+  }
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+  html{
+    scroll-behavior:smooth;
+}
+
+  body{
+    font-family:'Inter',sans-serif;
+    color:var(--text-body);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4,.brand,.nav-link,.btn{
+    font-family:'Poppins',sans-serif;
+  }
+
+  a{
+    text-decoration:none;
+    color:inherit;
+}
+  ul{
+    list-style:
+    none;
+}
+  img{max-width:100%;
+    display:block;
+}
+
+  .wrap{
+    max-width:1600px;
+    margin:0 auto;
+    padding:0 64px;
+  }
