@@ -21,6 +21,7 @@
     color:var(--text-body);
     background:var(--bg);
     -webkit-font-smoothing:antialiased;
+    transition:background .25s ease, color .25s ease;
   }
 
   h1,h2,h3,h4,.brand,.nav-link,.btn{
@@ -43,6 +44,7 @@
     top:0;
     z-index:50;
     border-bottom:1px solid transparent;
+    transition:background .25s ease;
   }
   .nav{
     display:flex;
@@ -111,6 +113,39 @@
     padding:11px 24px;
     border-radius:10px;
   }
+
+  /* Ações do lado direito do menu (toggle de tema + botão Jogar) */
+  .nav-actions{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .theme-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:1.5px solid var(--border);
+    background:var(--card);
+    color:var(--blue);
+    cursor:pointer;
+    transition:background .2s ease, border-color .2s ease, transform .18s ease;
+    flex-shrink:0;
+  }
+  .theme-toggle:hover{
+    transform:translateY(-2px);
+    border-color:var(--blue);
+  }
+  .theme-toggle svg{
+    width:20px;
+    height:20px;
+  }
+  .theme-toggle .icon-moon{display:none;}
+  .theme-toggle .icon-sun{display:block;}
+  html.dark-mode .theme-toggle .icon-sun{display:none;}
+  html.dark-mode .theme-toggle .icon-moon{display:block;}
 
   
   .hero{
@@ -324,6 +359,7 @@
   footer{
     background:var(--footer-bg);
     padding-top:80px;
+    transition:background .25s ease;
   }
   .footer-top{
     display:grid;
@@ -690,4 +726,50 @@
     .media-card .badge-num{position:static;margin-bottom:16px;}
     .faq{padding:48px 24px;}
     .stat-row{flex-direction:column;}
+  }
+
+  /* ============================
+     MODO ESCURO
+     ============================ */
+  html.dark-mode{
+    --navy:#EDEFFB;
+    --blue:#5B8DFF;
+    --blue-dark:#7FA2FF;
+    --bg:#0A0C16;
+    --bg-alt:#10121F;
+    --footer-bg:#0C0E19;
+    --text-body:#A6A9C2;
+    --border:#242739;
+    --card:#12142280;
+  }
+  html.dark-mode .panel,
+  html.dark-mode .mini-card,
+  html.dark-mode .proto-card:not(.dark),
+  html.dark-mode .accordion-item{
+    background:#12142A;
+    border-color:var(--border);
+  }
+  html.dark-mode .footer-top{
+    border-bottom-color:#242739;
+  }
+  html.dark-mode .footer-col a{
+    color:#c2c4da;
+  }
+  html.dark-mode .footer-bottom{
+    color:#8286a0;
+  }
+  html.dark-mode .panel-icon{
+    color:#3a3f5c;
+  }
+  html.dark-mode .timeline-item{
+    border-left-color:#2a2e46;
+  }
+  html.dark-mode .photo-pair .photo{
+    background:linear-gradient(160deg,#1c2038,#12162a);
+  }
+  html.dark-mode .stat-box .label{
+    color:#7c81a0;
+  }
+  html.dark-mode .field-pill{
+    border-color:var(--border);
   }
