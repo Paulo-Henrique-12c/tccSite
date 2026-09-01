@@ -39,7 +39,7 @@
     padding:0 64px;
   }
 
- 
+
   header{
     background:var(--bg);
     position:sticky;
@@ -116,7 +116,6 @@
     border-radius:10px;
   }
 
-  /* Ações do lado direito do menu (toggle de tema + botão Jogar) */
   .nav-actions{
     display:flex;
     align-items:center;
@@ -287,7 +286,7 @@
     color:var(--text-body);
   }
 
- 
+
   .pillars{
     padding:150px 0 150px;
   }
@@ -318,39 +317,32 @@
     flex-direction:column;
   }
   .timeline-item{
-    position:relative;
-    padding:0 0 46px 6px;
+    display:flex;
+    align-items:flex-start;
+    gap:22px;
+    padding:0 0 46px 30px;
     border-left:2px solid #dfe3f5;
-    padding-left:34px;
   }
   .timeline-item:last-child{
     border-left:2px solid transparent;
     padding-bottom:0;
   }
   .timeline-num{
-    position:absolute;
-    left:-2px;
-    top:-14px;
-    font-size:78px;
+    font-size:56px;
     font-weight:700;
-    color:var(--blue);
-    opacity:.12;
+    color:#c7d6f7;
     font-family:'Poppins',sans-serif;
     line-height:1;
+    flex-shrink:0;
     user-select:none;
-    z-index:0;
   }
-  .timeline-item h3{
-    position:relative;
-    z-index:1;
+  .timeline-content h3{
     font-size:24px;
     color:var(--navy);
     font-weight:600;
     margin-bottom:12px;
   }
-  .timeline-item p{
-    position:relative;
-    z-index:1;
+  .timeline-content p{
     font-size:16.5px;
     line-height:1.7;
     max-width:560px;
@@ -403,7 +395,7 @@
     color:#6b6f85;
   }
 
- 
+
   .page-hero{
     padding:84px 0 56px;
     text-align:center;
@@ -429,7 +421,7 @@
     color:var(--text-body);
   }
 
- 
+
   .video-frame{
     position:relative;
     max-width:1500px;
@@ -473,7 +465,7 @@
     color:rgba(255,255,255,.85);
   }
 
- 
+
   .protocol{
     padding:24px 0 20px;
   }
@@ -697,7 +689,7 @@
     padding-top:16px;
   }
 
- 
+
   @media (max-width:960px){
     .wrap{padding:0 24px;}
     .nav-links{display:none;}
@@ -729,9 +721,6 @@
     .stat-row{flex-direction:column;}
   }
 
-  /* ============================
-     MODO ESCURO
-     ============================ */
   html.dark-mode{
     --navy:#EDEFFB;
     --blue:#5B8DFF;
@@ -764,6 +753,9 @@
   }
   html.dark-mode .timeline-item{
     border-left-color:#2a2e46;
+  }
+  html.dark-mode .timeline-num{
+    color:#2b3a66;
   }
   html.dark-mode .photo-pair .photo{
     background:linear-gradient(160deg,#1c2038,#12162a);
