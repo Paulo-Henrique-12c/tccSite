@@ -16,6 +16,10 @@
 
   html{scroll-behavior:smooth;}
 
+  html, body{
+    overflow-x:hidden;
+  }
+
   body{
     font-family:'Inter',sans-serif;
     color:var(--text-body);
@@ -38,7 +42,6 @@
     padding:0 4rem;
   }
 
-  /* ---------- NAVBAR ---------- */
   header{
     background:var(--bg);
     position:sticky;
@@ -84,6 +87,9 @@
     background:var(--blue);
     border-radius:0.125rem;
   }
+  .nav-link-cta{
+    display:none;
+  }
   .btn{
     display:inline-flex;
     align-items:center;
@@ -115,7 +121,6 @@
     border-radius:0.625rem;
   }
 
-  /* Ações do lado direito do menu (toggle de tema + botão Jogar) */
   .nav-actions{
     display:flex;
     align-items:center;
@@ -148,7 +153,54 @@
   html.dark-mode .theme-toggle .icon-sun{display:none;}
   html.dark-mode .theme-toggle .icon-moon{display:block;}
 
-  /* ---------- HERO ---------- */
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:0.3125rem;
+    width:2.625rem;
+    height:2.625rem;
+    border-radius:50%;
+    border:0.09375rem solid var(--border);
+    background:var(--card);
+    cursor:pointer;
+    flex-shrink:0;
+    z-index:70;
+    position:relative;
+  }
+  .hamburger span{
+    display:block;
+    width:1.125rem;
+    height:0.125rem;
+    border-radius:0.125rem;
+    background:var(--navy);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  html.nav-open .hamburger span:nth-child(1){
+    transform:translateY(0.4375rem) rotate(45deg);
+  }
+  html.nav-open .hamburger span:nth-child(2){
+    opacity:0;
+  }
+  html.nav-open .hamburger span:nth-child(3){
+    transform:translateY(-0.4375rem) rotate(-45deg);
+  }
+
+  .nav-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(5,10,25,.45);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .3s ease;
+    z-index:55;
+  }
+  html.nav-open .nav-overlay{
+    opacity:1;
+    pointer-events:auto;
+  }
+
   .hero{
     padding:9.375rem 0 10.625rem;
   }
@@ -178,7 +230,6 @@
     margin-top:2.5rem;
   }
 
-  /* ---------- STRUCTURE SECTION ---------- */
   .structure{
     background:var(--bg-alt);
     padding:8.125rem 0 8.75rem;
@@ -287,7 +338,6 @@
     color:var(--text-body);
   }
 
-  /* ---------- PILLARS / TIMELINE SECTION ---------- */
   .pillars{
     padding:9.375rem 0 9.375rem;
   }
@@ -356,7 +406,6 @@
     max-width:35rem;
   }
 
-  /* ---------- FOOTER ---------- */
   footer{
     background:var(--footer-bg);
     padding-top:5rem;
@@ -403,7 +452,6 @@
     color:#6b6f85;
   }
 
-  /* ---------- PAGE HERO (Manual) ---------- */
   .page-hero{
     padding:5.25rem 0 3.5rem;
     text-align:center;
@@ -429,7 +477,6 @@
     color:var(--text-body);
   }
 
-  /* ---------- VIDEO / HERO MEDIA ---------- */
   .video-frame{
     position:relative;
     max-width:93.75rem;
@@ -473,7 +520,6 @@
     color:rgba(255,255,255,.85);
   }
 
-  /* ---------- PROTOCOL SECTION ---------- */
   .protocol{
     padding:1.5rem 0 1.25rem;
   }
@@ -625,7 +671,6 @@
   .media-card .badge-num{position:absolute;top:0;right:0;}
   .media-card .proto-body{padding-right:4.875rem;}
 
-  /* ---------- FAQ SECTION ---------- */
   .faq{
     background:var(--bg-alt);
     border-radius:var(--radius-lg);
@@ -697,10 +742,6 @@
     border-top:0.0625rem solid var(--border);
     padding-top:1rem;
   }
-
-  /* ================================================
-     PÁGINA: DETALHES DO PROJETO
-     ================================================ */
 
   .selo{
     display:inline-flex;
@@ -926,10 +967,44 @@
     .rodape-base{flex-direction:column;align-items:flex-start;}
   }
 
-  /* ---------- RESPONSIVE ---------- */
   @media (max-width:60rem){
     .wrap{padding:0 1.5rem;}
-    .nav-links{display:none;}
+
+    .hamburger{
+      display:flex;
+    }
+
+    .nav-links{
+      position:fixed;
+      top:0;
+      right:-100%;
+      width:78%;
+      max-width:22rem;
+      height:100vh;
+      background:var(--bg);
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:flex-start;
+      gap:1.75rem;
+      padding:6.5rem 2rem 2rem;
+      transition:right .3s ease;
+      z-index:60;
+      box-shadow:-0.625rem 0 1.875rem rgba(0,0,0,.12);
+    }
+    html.nav-open .nav-links{
+      right:0;
+    }
+    .nav-link{
+      font-size:1.125rem;
+    }
+    .nav-link-cta{
+      display:inline-flex;
+      margin-top:0.5rem;
+    }
+    .btn-nav-desktop{
+      display:none;
+    }
+
     .hero{padding:5rem 0 5.625rem;}
     .hero h1{font-size:2.375rem;}
     .structure-grid{grid-template-columns:1fr;}
@@ -958,9 +1033,6 @@
     .stat-row{flex-direction:column;}
   }
 
-  /* ============================
-     MODO ESCURO
-     ============================ */
   html.dark-mode{
     --navy:#EDEFFB;
     --blue:#5B8DFF;
@@ -1015,4 +1087,7 @@
   }
   html.dark-mode .cartao-valor svg{
     color:#3a3f5c;
+  }
+  html.dark-mode .hamburger span{
+    background:var(--navy);
   }
