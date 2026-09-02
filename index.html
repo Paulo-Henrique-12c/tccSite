@@ -20,13 +20,14 @@
 <header>
   <div class="wrap nav">
     <a href="#" class="brand">CuidadoEterno</a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="./index.html" class="nav-link active">Home</a>
       <a href="./pags/instrucoes.html" class="nav-link">Manual</a>
       <a href="./pags/detalhes.html" class="nav-link">Detalhes</a>
       <a href="#sobre" class="nav-link">Sobre Nós</a>
       <a href="#referencias" class="nav-link">Referências</a>
       <a href="#game" class="nav-link">Game</a>
+      <a href="#jogar" class="btn btn-primary btn-nav nav-link-cta">Jogar</a>
     </nav>
     <div class="nav-actions">
       <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" title="Alternar modo escuro">
@@ -38,9 +39,15 @@
           <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/>
         </svg>
       </button>
-      <a href="#jogar" class="btn btn-primary btn-nav">Jogar</a>
+      <a href="#jogar" class="btn btn-primary btn-nav btn-nav-desktop">Jogar</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
+  <div class="nav-overlay" id="navOverlay"></div>
 </header>
 
 <main>
@@ -167,5 +174,29 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  (function () {
+    const html = document.documentElement;
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('navOverlay');
+
+    function closeMenu() {
+      html.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+      const isOpen = html.classList.toggle('nav-open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+</script>
 </body>
 </html>

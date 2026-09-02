@@ -89,6 +89,9 @@
     background:var(--blue);
     border-radius:0.125rem;
   }
+  .nav-link-cta{
+    display:none;
+  }
   .btn{
     display:inline-flex;
     align-items:center;
@@ -151,6 +154,54 @@
   .theme-toggle .icon-sun{display:block;}
   html.dark-mode .theme-toggle .icon-sun{display:none;}
   html.dark-mode .theme-toggle .icon-moon{display:block;}
+
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:0.3125rem;
+    width:2.625rem;
+    height:2.625rem;
+    border-radius:50%;
+    border:0.09375rem solid var(--border);
+    background:var(--card);
+    cursor:pointer;
+    flex-shrink:0;
+    z-index:70;
+    position:relative;
+  }
+  .hamburger span{
+    display:block;
+    width:1.125rem;
+    height:0.125rem;
+    border-radius:0.125rem;
+    background:var(--navy);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  html.nav-open .hamburger span:nth-child(1){
+    transform:translateY(0.4375rem) rotate(45deg);
+  }
+  html.nav-open .hamburger span:nth-child(2){
+    opacity:0;
+  }
+  html.nav-open .hamburger span:nth-child(3){
+    transform:translateY(-0.4375rem) rotate(-45deg);
+  }
+
+  .nav-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(5,10,25,.45);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .3s ease;
+    z-index:55;
+  }
+  html.nav-open .nav-overlay{
+    opacity:1;
+    pointer-events:auto;
+  }
 
 
   .hero{
@@ -698,7 +749,42 @@
 
   @media (max-width:60rem){
     .wrap{padding:0 1.5rem;}
-    .nav-links{display:none;}
+
+    .hamburger{
+      display:flex;
+    }
+
+    .nav-links{
+      position:fixed;
+      top:0;
+      right:-100%;
+      width:78%;
+      max-width:22rem;
+      height:100vh;
+      background:var(--bg);
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:flex-start;
+      gap:1.75rem;
+      padding:6.5rem 2rem 2rem;
+      transition:right .3s ease;
+      z-index:60;
+      box-shadow:-0.625rem 0 1.875rem rgba(0,0,0,.12);
+    }
+    html.nav-open .nav-links{
+      right:0;
+    }
+    .nav-link{
+      font-size:1.125rem;
+    }
+    .nav-link-cta{
+      display:inline-flex;
+      margin-top:0.5rem;
+    }
+    .btn-nav-desktop{
+      display:none;
+    }
+
     .hero{padding:5rem 0 5.625rem;}
     .hero h1{font-size:2.375rem;}
     .structure-grid{grid-template-columns:1fr;}
@@ -776,4 +862,7 @@
   }
   html.dark-mode .stat-box .label{
     color:#7c81a0;
+  }
+  html.dark-mode .hamburger span{
+    background:var(--navy);
   }
