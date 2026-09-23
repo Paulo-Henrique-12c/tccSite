@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nós — CuidadoEterno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quemsomos.css">
+<script>
+  (function () {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand">CuidadoEterno</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="./instrucoes.html" class="nav-link">Manual</a>
+      <a href="./detalhes.html" class="nav-link">Detalhes</a>
+      <a href="./sobre.html" class="nav-link active">Sobre Nós</a>
+      <a href="#referencias" class="nav-link">Referências</a>
+      <a href="#jogo" class="nav-link">Jogo</a>
+      <a href="#jogar" class="btn btn-primary btn-nav nav-link-cta">Jogar</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" title="Alternar modo escuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4.5"/>
+          <path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+      <a href="#jogar" class="btn btn-primary btn-nav btn-nav-desktop">Jogar</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<main>
+
+  <section class="team-hero">
+    <div class="wrap">
+      <h1>Conheça Nossa Equipe</h1>
+      <p>Unindo rigor acadêmico e inovação tecnológica para desenvolver soluções que transformam a pesquisa científica em impacto real.</p>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap team-grid">
+
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="../imgs/imgsEquipe/leticia.jpg" alt="Letícia Nascimento">
+        </div>
+        <h3>Letícia Nascimento</h3>
+        <span class="team-role">Líder do Projeto</span>
+        <span class="team-handle">@leticiawgs</span>
+        <div class="team-icons">
+          <a href="#" aria-label="Link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 15l6-6" stroke-linecap="round"/><path d="M10.5 6.5l1-1a4 4 0 0 1 5.66 5.66l-1.5 1.5M13.5 17.5l-1 1a4 4 0 0 1-5.66-5.66l1.5-1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Compartilhar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="2.4"/><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="19" r="2.4"/><path d="M8.2 10.8l7.6-4.2M8.2 13.2l7.6 4.2" stroke-linecap="round"/></svg></a>
+          <a href="mailto:leticia@cuidadoeterno.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="../imgs/imgsEquipe/paulo.jpg" alt="Paulo Novais">
+        </div>
+        <h3>Paulo Novais</h3>
+        <span class="team-role">Desenvolvedor Full Stack</span>
+        <span class="team-handle">@paulo.dssn</span>
+        <div class="team-icons">
+          <a href="#" aria-label="Link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 15l6-6" stroke-linecap="round"/><path d="M10.5 6.5l1-1a4 4 0 0 1 5.66 5.66l-1.5 1.5M13.5 17.5l-1 1a4 4 0 0 1-5.66-5.66l1.5-1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Código"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 7L4 12l5 5M15 7l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="mailto:paulo@cuidadoeterno.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="../imgs/imgsEquipe/artur.jpg" alt="Artur Sodré">
+        </div>
+        <h3>Artur Sodré</h3>
+        <span class="team-role">Analista de UX/UI</span>
+        <span class="team-handle">@artur.luzx</span>
+        <div class="team-icons">
+          <a href="#" aria-label="Link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 15l6-6" stroke-linecap="round"/><path d="M10.5 6.5l1-1a4 4 0 0 1 5.66 5.66l-1.5 1.5M13.5 17.5l-1 1a4 4 0 0 1-5.66-5.66l1.5-1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586" stroke-linecap="round"/><circle cx="11" cy="11" r="2"/></svg></a>
+          <a href="mailto:artur@cuidadoeterno.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="../imgs/imgsEquipe/eyshilla.jpg" alt="Eyshilla Silva">
+        </div>
+        <h3>Eyshilla Silva</h3>
+        <span class="team-role">Pesquisadora</span>
+        <span class="team-handle">@eyshilla__</span>
+        <div class="team-icons">
+          <a href="#" aria-label="Link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 15l6-6" stroke-linecap="round"/><path d="M10.5 6.5l1-1a4 4 0 0 1 5.66 5.66l-1.5 1.5M13.5 17.5l-1 1a4 4 0 0 1-5.66-5.66l1.5-1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Código"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 7L4 12l5 5M15 7l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="mailto:eyshilla@cuidadoeterno.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="../imgs/imgsEquipe/sophia.jpg" alt="Sophia Oliveira">
+        </div>
+        <h3>Sophia Oliveira</h3>
+        <span class="team-role">Desenvolvedor Backend</span>
+        <span class="team-handle">@liverssi_</span>
+        <div class="team-icons">
+          <a href="#" aria-label="Link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 15l6-6" stroke-linecap="round"/><path d="M10.5 6.5l1-1a4 4 0 0 1 5.66 5.66l-1.5 1.5M13.5 17.5l-1 1a4 4 0 0 1-5.66-5.66l1.5-1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Compartilhar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="2.4"/><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="19" r="2.4"/><path d="M8.2 10.8l7.6-4.2M8.2 13.2l7.6 4.2" stroke-linecap="round"/></svg></a>
+          <a href="mailto:sophia@cuidadoeterno.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap contact-grid">
+
+      <div class="contact-info">
+        <span class="eyebrow">CONTATO</span>
+        <h2>Vamos Conversar sobre Pesquisa?</h2>
+        <p>Estamos abertos a colaborações acadêmicas e parcerias institucionais. Envie sua mensagem e responderemos em até 48 horas úteis.</p>
+
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+          <span>UNASP SP - Estr. de Itapecerica, 5859 - Capao Redondo, São Paulo - SP, 05890-020</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>cuidado.eterno@gmail.com</span>
+        </div>
+      </div>
+
+      <form class="contact-form-card" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail Institucional</label>
+            <input type="email" id="email" name="email" placeholder="nome@universidade.edu" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto">
+            <option>Colaboração em Pesquisa</option>
+            <option>Dúvida sobre o Projeto</option>
+            <option>Parceria Institucional</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">Enviar Mensagem</button>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>CuidadoEterno</h3>
+        <p>Fomentando a excelência acadêmica através de tecnologias robustas e design centrado no usuário.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="#">Metodologia</a></li>
+          <li><a href="#">Resultados</a></li>
+          <li><a href="#">Documentação</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Receba atualizações sobre novas fases do projeto.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email" aria-label="Email" required>
+          <button type="submit" aria-label="Inscrever">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span class="footer-bottom" style="padding:0;">© 2026 Academic Cuidado Eterno. Todos os Direitos Reservados.</span>
+      <div class="rodape-links-extra">
+        <a href="#">Source Code</a>
+        <a href="#">Documentation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+  (function () {
+    const html = document.documentElement;
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('navOverlay');
+
+    function closeMenu() {
+      html.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+      const isOpen = html.classList.toggle('nav-open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Mensagem enviada! Em breve entraremos em contato.');
+    this.reset();
+  });
+</script>
+</body>
+</html>
