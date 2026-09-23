@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Referências — CuidadoEterno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./referencias.css">
+<script>
+  (function () {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand">CuidadoEterno</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="./instrucoes.html" class="nav-link">Manual</a>
+      <a href="./detalhes.html" class="nav-link">Detalhes</a>
+      <a href="./quemsomos.html" class="nav-link">Sobre Nós</a>
+      <a href="./referencias.html" class="nav-link active">Referências</a>
+      <a href="./jogo.html" class="nav-link">Jogo</a>
+      <a href="#jogar" class="btn btn-primary btn-nav nav-link-cta">Jogar</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" title="Alternar modo escuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4.5"/>
+          <path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+      <a href="#jogar" class="btn btn-primary btn-nav btn-nav-desktop">Jogar</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<main>
+
+  <section class="ref-hero">
+    <div class="wrap">
+      <h1>Referências</h1>
+      <p>Este projeto foi desenvolvido com base em documentações oficiais, como as do ESP32 e Arduino, além de livros e materiais técnicos da área de eletrônica e sistemas embarcados. Também foram utilizados datasheets de componentes e conteúdos sobre aplicações de IoT no monitoramento.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <article class="featured-ref">
+      <div class="featured-ref-text">
+        <span class="featured-badge">FOUNDATIONAL TEXT</span>
+        <h2>ESPRESSIF SYSTEMS. Ficha técnica da série ESP32.</h2>
+        <p>A documentação do ESP32 foi essencial para o desenvolvimento do projeto, fornecendo as bases técnicas para a implementação do sistema embarcado, comunicação e funcionamento dos componentes utilizados na solução.</p>
+        <div class="featured-meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5c.8 0 1.5-.7 1.5-1.5v-13z"/></svg>
+          <span>Sistemas Espressif</span>
+        </div>
+        <a href="https://www.espressif.com/en/products/socs/esp32" class="featured-link" target="_blank" rel="noopener">
+          Read Full Article
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="featured-ref-media"></div>
+    </article>
+  </section>
+
+  <section class="wrap biblio">
+    <div class="section-title">
+      <span class="bar"></span>
+      <h2>Registros Bibliográficos</h2>
+    </div>
+
+    <div class="biblio-list">
+
+      <div class="biblio-item">
+        <div class="biblio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M14 2v5h5" stroke-linejoin="round"/><path d="M8 13h8M8 17h5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="biblio-text">
+          <h4>Espressif Systems. Ficha técnica da série ESP32.</h4>
+          <p>Revista de Arquitetura de Sistemas, 15(4), 210-225. doi:10.1016/jsa.2022.10221</p>
+        </div>
+        <a href="#" class="biblio-link">Download PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+
+      <div class="biblio-item">
+        <div class="biblio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M14 2v5h5" stroke-linejoin="round"/><path d="M8 12h8M8 16h8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="biblio-text">
+          <h4>ORGANIZAÇÃO MUNDIAL DA SAÚDE (OMS).</h4>
+          <p>Envelhecimento e Saúde.</p>
+        </div>
+        <a href="#" class="biblio-link">Ver on-line <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+
+      <div class="biblio-item">
+        <div class="biblio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4" stroke-linecap="round"/></svg>
+        </div>
+        <div class="biblio-text">
+          <h4>Padrão IEEE para Tecnologia da Informação (Std 802.11-2020).</h4>
+          <p>Especificações técnicas para redes locais sem fio.</p>
+        </div>
+        <a href="#" class="biblio-link">IEEE Xplore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+
+      <div class="biblio-item">
+        <div class="biblio-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5" stroke-linecap="round"/><path d="M22 9v6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="biblio-text">
+          <h4>Sistemas embarcados aplicados ao monitoramento de idosos.</h4>
+          <p>Silva, J. R.; Souza, M. A.</p>
+        </div>
+        <a href="#" class="biblio-link">Tese Completa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="citation-cta">
+      <div class="citation-cta-text">
+        <h2>Rede de citações</h2>
+        <p>As referências utilizadas neste projeto formam uma base sólida de conhecimento, conectando estudos sobre tecnologia embarcada e cuidados com idosos, evidenciando a relevância e aplicação prática da solução proposta.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary">Mapa Interativo</a>
+          <a href="#" class="btn btn-cta-outline">Exportar dados</a>
+        </div>
+      </div>
+      <div class="citation-cta-media">
+        <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="rgba(255,255,255,.28)" stroke-width="0.75" fill="none">
+            <path d="M40 60 L140 100 L220 50 L320 90 L360 40"/>
+            <path d="M140 100 L120 180 L220 200 L320 90"/>
+            <path d="M220 50 L220 200 L60 190"/>
+            <path d="M60 190 L120 180"/>
+            <path d="M320 90 L340 190 L220 200"/>
+            <path d="M40 60 L60 190"/>
+          </g>
+          <g fill="#fff">
+            <circle cx="40" cy="60" r="2.5"/>
+            <circle cx="140" cy="100" r="3.5"/>
+            <circle cx="220" cy="50" r="2.5"/>
+            <circle cx="320" cy="90" r="3.5"/>
+            <circle cx="360" cy="40" r="2"/>
+            <circle cx="120" cy="180" r="2.5"/>
+            <circle cx="220" cy="200" r="3"/>
+            <circle cx="60" cy="190" r="2.5"/>
+            <circle cx="340" cy="190" r="2.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap ref-footer">
+    <div class="footer-brand">
+      <h3>CuidadoEterno</h3>
+      <p>Inovação e rigor acadêmico para o futuro da tecnologia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>RESOURCES</h4>
+      <ul>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Source Code</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>SUPPORT</h4>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-meta">
+      <span class="footer-bottom" style="padding:0;">© 2026 Academic Cuidado Eterno. Todos os Direitos Reservados.</span>
+      <div class="footer-meta-icons">
+        <a href="#" aria-label="Documentação"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5" stroke-linecap="round"/></svg></a>
+        <a href="#" aria-label="Código"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 7L4 12l5 5M15 7l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" aria-label="Rede"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="2.4"/><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="19" r="2.4"/><path d="M8.2 10.8l7.6-4.2M8.2 13.2l7.6 4.2" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+  (function () {
+    const html = document.documentElement;
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('navOverlay');
+
+    function closeMenu() {
+      html.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+      const isOpen = html.classList.toggle('nav-open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+</script>
+</body>
+</html>

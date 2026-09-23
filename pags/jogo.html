@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo — CuidadoEterno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="jogo.css">
+<script>
+  (function () {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.classList.add('dark-mode');
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand">CuidadoEterno</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="./instrucoes.html" class="nav-link">Manual</a>
+      <a href="./detalhes.html" class="nav-link">Detalhes</a>
+      <a href="./sobre.html" class="nav-link">Sobre Nós</a>
+      <a href="./referencias.html" class="nav-link">Referências</a>
+      <a href="./jogo.html" class="nav-link active">Jogo</a>
+      <a href="#jogar" class="btn btn-primary btn-nav nav-link-cta">Jogar</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" title="Alternar modo escuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4.5"/>
+          <path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+      <a href="#jogar" class="btn btn-primary btn-nav btn-nav-desktop">Jogar</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<main>
+
+  <section class="game-hero">
+    <div class="wrap game-hero-grid">
+      <div class="game-hero-text">
+        <span class="game-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 10v4M5 12h4" stroke-linecap="round"/><circle cx="15.5" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="17.5" cy="13" r="0.9" fill="currentColor" stroke="none"/></svg>
+          EXPERIÊNCIA INTERATIVA
+        </span>
+        <h1>Transformando Pesquisa em Jogabilidade.</h1>
+        <p>Em "Sombras de Kazegakure", você é a última esperança de um reino amaldiçoado. Assuma o papel de um ninja em uma aventura 2D de tirar o fôlego, onde a precisão e a agilidade são suas maiores armas.</p>
+        <div class="game-hero-actions">
+          <a href="#jogar" class="btn btn-primary">Jogar Agora
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3l7 7-9 9-5 1 1-5 9-9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="./instrucoes.html" class="btn btn-outline">Ver Manual
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5c.8 0 1.5-.7 1.5-1.5v-13z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="game-hero-media">
+        <img src="../imgs/imgsGame/hero-ninja.jpg" alt="Ninja em silhueta diante da lua cheia, cenário de Sombras de Kazegakure" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section class="game-dark">
+    <div class="wrap">
+
+      <div class="game-dark-head">
+        <div>
+          <span class="eyebrow-light">Contexto e Narrativa</span>
+          <p>Conheça o universo onde os dados ganham vida e os desafios acadêmicos se tornam missões épicas.</p>
+        </div>
+        <span class="head-line"></span>
+      </div>
+
+      <div class="game-bento">
+        <div class="game-card game-card-light">
+          <div class="game-card-media">
+            <img src="../imgs/imgsGame/narrativa.jpg" alt="Ninja enfrentando inimigos em vilarejo iluminado pela lua" onerror="this.style.display='none'">
+          </div>
+          <p>Sua missão é clara: recuperar artefatos sagrados dispersos pelo território para deter uma entidade sombria que ameaça mergulhar tudo em caos. Cada passo é um desafio, cada inimigo uma prova de sua determinação.</p>
+        </div>
+        <div class="game-card game-card-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="7" rx="2"/><path d="M9 9v3M15 9v3" stroke-linecap="round"/><rect x="4" y="12" width="16" height="9" rx="2"/><path d="M9 16.5h.01M15 16.5h.01" stroke-linecap="round" stroke-width="2.4"/></svg>
+          <h3>Mecânicas</h3>
+          <p>Baseado em lógica booleana e resolução de problemas estruturados.</p>
+        </div>
+      </div>
+
+      <div class="game-bento game-bento-2">
+        <div class="game-card game-card-alt">
+          <h3>Tecnologia</h3>
+          <p>Desenvolvido no GDevelop, utilizando paradigmas de programação visual que espelham a arquitetura do nosso projeto.</p>
+          <div class="tag-row">
+            <span class="tag-pill">HTML5</span>
+            <span class="tag-pill">WEBGL</span>
+          </div>
+        </div>
+        <div class="game-card game-card-alt game-card-cta">
+          <div>
+            <h3>Preparado para o desafio?</h3>
+            <p class="cta-blue">O Jogo foi testado e aprovado, recupere e salve a ilha de Kazekugure</p>
+          </div>
+          <svg class="cap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5" stroke-linecap="round"/><path d="M22 9v6" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+
+      <div class="game-final">
+        <span class="eyebrow-light">Inicie sua jornada agora.</span>
+        <p>A experiência completa leva aproximadamente 15 minutos e cobre todos os capítulos da tese.</p>
+        <a href="#jogar" class="btn btn-primary btn-final">Jogar Agora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>CuidadoEterno</h3>
+        <p>Inovação e rigor acadêmico para o futuro da tecnologia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>RECURSOS</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Source Code</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTATO</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="mailto:eternocuidao@eaportal.org">Support: eternocuidao@eaportal.org</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>NEWSLETTER</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email institucional" aria-label="Email institucional" required>
+          <button type="submit" aria-label="Inscrever">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+        <p>Receba atualizações sobre novas fases e dados do projeto.</p>
+      </div>
+    </div>
+    <div class="footer-bottom footer-bottom-center">© 2026 Academic Cuidado Eterno. Todos os Direitos Reservados.</div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+  (function () {
+    const html = document.documentElement;
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('navOverlay');
+
+    function closeMenu() {
+      html.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+      const isOpen = html.classList.toggle('nav-open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+</script>
+</body>
+</html>
